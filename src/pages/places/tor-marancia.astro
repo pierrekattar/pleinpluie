@@ -30,15 +30,14 @@ import Footer from '../../components/Footer.astro';
         </p>
 
         <!-- Hero Video -->
-        <div class="mb-10 aspect-video" style="position: relative;">
+        <div class="mb-10 aspect-video" style="position: relative; overflow: hidden;">
           <iframe
             src="https://www.youtube.com/embed/T7NgvZ-zD8E?si=FU444Sdy6NyHA3vB&modestbranding=1"
             title="Tor Marancia - Plein Pluie"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             allowfullscreen
-            class="w-full h-full"
+            style="position: absolute; top: -40px; left: 0; width: 100%; height: calc(100% + 40px);"
           ></iframe>
-          <div style="position: absolute; top: 0; left: 0; width: 60%; height: 60px; background: #000; pointer-events: none;"></div>
         </div>
 
         <p class="lang-en text-lg md:text-xl leading-relaxed text-foreground/90 mb-10">
@@ -67,15 +66,14 @@ import Footer from '../../components/Footer.astro';
         </p>
 
         <!-- Second Video -->
-        <div class="mb-12 aspect-video" style="position: relative;">
+        <div class="mb-12 aspect-video" style="position: relative; overflow: hidden;">
           <iframe
             src="https://www.youtube.com/embed/AHUzYXET9b0?modestbranding=1"
             title="Daniele finishing the canvas - Plein Pluie"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             allowfullscreen
-            class="w-full h-full"
+            style="position: absolute; top: -40px; left: 0; width: 100%; height: calc(100% + 40px);"
           ></iframe>
-          <div style="position: absolute; top: 0; left: 0; width: 60%; height: 60px; background: #000; pointer-events: none;"></div>
         </div>
 
       </div>
