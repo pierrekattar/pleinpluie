@@ -1,0 +1,24 @@
+---
+const year = new Date().getFullYear();
+---
+
+<footer class="py-8 px-6 border-t border-border">
+  <div class="max-w-4xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
+    <div class="flex items-center gap-2 text-sm font-sans">
+      <span class="text-muted-foreground">
+        <span class="lang-en">Contact</span>
+        <span class="lang-it">Contatto</span>:
+      </span>
+      <a
+        href="mailto:enpleinpluie@gmail.com"
+        class="text-foreground hover:text-foreground/70 transition-colors"
+      >
+        enpleinpluie@gmail.com
+      </a>
+    </div>
+
+    <p class="text-sm text-muted-foreground font-sans">
+      © {year} Plein Pluie. <span class="lang-en">All rights reserved</span><span class="lang-it">Tutti i diritti riservati</span>.
+    </p>
+  </div>
+</footer>

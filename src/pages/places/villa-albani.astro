@@ -1,0 +1,78 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+---
+
+<BaseLayout title="Villa Albani Torlonia — Plein Pluie">
+  <Header />
+
+  <main>
+    <article class="pt-32 pb-16 px-6">
+      <div class="max-w-4xl mx-auto">
+
+        <h1 class="text-3xl md:text-4xl font-light mb-8 text-foreground">
+          Villa Albani Torlonia
+        </h1>
+
+        <p class="lang-en text-lg md:text-xl leading-relaxed text-foreground/90 mb-10">
+          The Villa Albani Torlonia hides within the city of Rome. It's where, in 1870, an armistice was signed that forever sanctioned the end of the Popes' power over the territories and since then, time has stood still.
+        </p>
+        <p class="lang-it text-lg md:text-xl leading-relaxed text-foreground/90 mb-10">
+          Dentro Roma si nasconde la settecentesca Villa Albani Torlonia. Laggiù, nel 1870, fu firmato l'armistizio che sancì per sempre la fine del potere territoriale dei papi e da allora il tempo si è fermato.
+        </p>
+
+        <!-- Hero Image -->
+        <div class="mb-10">
+          <img
+            src="/places/villa-albani-hero.jpg"
+            alt="Artist painting on circular canvas by metal shutters in the rain"
+            width="1400"
+            height="933"
+            class="w-full h-auto"
+            loading="eager"
+          />
+        </div>
+
+        <p class="lang-en text-lg md:text-xl leading-relaxed text-foreground/90 mb-10">
+          There is, however, still contact with the present day via the facade of the Kaffeehaus. It's located below street level because some of the Villa's gardens were constructed below the ground. It's a kind of noisy place, now full of car garages and detritus from young Romans out on the town. Under the rain, these sights and sounds amplify its contrasts.
+        </p>
+        <p class="lang-it text-lg md:text-xl leading-relaxed text-foreground/90 mb-10">
+          Esiste tuttavia un punto di contatto col presente: la facciata della Kaffeehaus, che appare più in basso rispetto alle vie circostanti, perché i giardini della villa includevano terrazzamenti. Si tratta di un luogo di contaminazione che sotto la pioggia ha amplificato i suoi contrasti.
+        </p>
+
+        <!-- Gate Image -->
+        <div class="mb-10">
+          <img
+            src="/places/villa-albani-gate.jpg"
+            alt="Artist crouched by ornate iron gate of Villa Albani at night in the rain"
+            width="1400"
+            height="933"
+            class="w-full h-auto"
+          />
+        </div>
+
+        <p class="lang-en text-lg md:text-xl leading-relaxed text-foreground/90 mb-10">
+          The morning after, the perspective changed. Rays of sunlight illuminated, if briefly, the Kaffeehaus's facade and, within it, the "gabinetto egiziano", a few of the pieces from Villa Albani's Egyptian collection.
+        </p>
+        <p class="lang-it text-lg md:text-xl leading-relaxed text-foreground/90 mb-10">
+          La prospettiva è cambiata il mattino successivo, quando i raggi del sole hanno illuminato, per un tempo limitato, la facciata della Kaffeehaus e i suoi sotterranei ci hanno svelato le statue del "gabinetto egiziano", cioè una parte della collezione di Villa Albani costituita da sculture egizie ed egittizzanti.
+        </p>
+
+        <!-- Facade Image -->
+        <div class="mb-12">
+          <img
+            src="/places/villa-albani-facade.jpg"
+            alt="The Kaffeehaus facade at Villa Albani illuminated by morning sunlight"
+            width="1400"
+            height="933"
+            class="w-full h-auto"
+          />
+        </div>
+
+      </div>
+    </article>
+  </main>
+
+  <Footer />
+</BaseLayout>

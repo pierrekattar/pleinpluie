@@ -1,0 +1,164 @@
+---
+---
+
+<header id="site-header" class="fixed top-0 left-0 right-0 z-50 transition-colors duration-200 bg-background/80 backdrop-blur-sm">
+  <div class="max-w-5xl mx-auto px-6 py-5 flex justify-between items-center">
+
+    <!-- Logo -->
+    <a href="/" class="hover:opacity-70 transition-opacity">
+      <img
+        src="/logo-transparent.png"
+        alt="Plein Pluie"
+        class="h-8 md:h-10 w-auto"
+      />
+    </a>
+
+    <!-- Desktop Nav -->
+    <nav class="hidden md:flex items-center gap-8 text-sm font-sans">
+
+      <!-- Places dropdown (CSS hover) -->
+      <div class="relative group">
+        <button class="flex items-center gap-1 text-muted-foreground hover:text-foreground transition-colors">
+          <span class="lang-en">Places</span>
+          <span class="lang-it">Luoghi</span>
+          <svg class="w-4 h-4 transition-transform group-hover:rotate-180" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="6 9 12 15 18 9"></polyline>
+          </svg>
+        </button>
+
+        <div class="absolute top-full left-0 pt-2 hidden group-hover:block">
+          <div class="bg-background border border-border shadow-lg min-w-[180px]">
+            <a href="/places/botanic-gardens" class="block px-4 py-3 text-muted-foreground hover:text-foreground hover:bg-muted/50 transition-colors">
+              <span class="lang-en">Botanic Gardens</span>
+              <span class="lang-it">Orti Botanici</span>
+            </a>
+            <a href="/places/tor-marancia" class="block px-4 py-3 text-muted-foreground hover:text-foreground hover:bg-muted/50 transition-colors">
+              Tor Marancia
+            </a>
+            <a href="/places/villa-albani" class="block px-4 py-3 text-muted-foreground hover:text-foreground hover:bg-muted/50 transition-colors">
+              Villa Albani
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Gallery -->
+      <a href="/gallery" class="text-muted-foreground hover:text-foreground transition-colors">
+        <span class="lang-en">Gallery</span>
+        <span class="lang-it">Galleria</span>
+      </a>
+
+      <!-- About -->
+      <a href="/about" class="text-muted-foreground hover:text-foreground transition-colors">
+        <span class="lang-en">Who are we?</span>
+        <span class="lang-it">Chi siamo?</span>
+      </a>
+
+      <!-- Language switcher -->
+      <div class="flex gap-2 ml-4 pl-4 border-l border-border">
+        <button data-lang-btn="en" onclick="setLang('en')" class="transition-colors hover:text-foreground">EN</button>
+        <span class="text-muted-foreground">/</span>
+        <button data-lang-btn="it" onclick="setLang('it')" class="transition-colors hover:text-foreground">IT</button>
+      </div>
+    </nav>
+
+    <!-- Mobile: language switcher only in top bar -->
+    <nav class="md:hidden flex items-center gap-4 text-sm font-sans">
+      <div class="flex gap-2">
+        <button data-lang-btn="en" onclick="setLang('en')" class="transition-colors hover:text-foreground">EN</button>
+        <span class="text-muted-foreground">/</span>
+        <button data-lang-btn="it" onclick="setLang('it')" class="transition-colors hover:text-foreground">IT</button>
+      </div>
+    </nav>
+  </div>
+
+  <!-- Mobile bottom menu -->
+  <div class="md:hidden border-t border-border">
+    <div class="max-w-5xl mx-auto px-6 py-3 flex flex-wrap justify-center gap-x-6 gap-y-2 text-sm font-sans">
+
+      <!-- Mobile Places dropdown (JS toggle) -->
+      <div class="relative">
+        <button id="mobile-places-btn" class="flex items-center gap-1 text-muted-foreground hover:text-foreground transition-colors">
+          <span class="lang-en">Places</span>
+          <span class="lang-it">Luoghi</span>
+          <svg id="mobile-chevron" class="w-4 h-4 transition-transform" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="6 9 12 15 18 9"></polyline>
+          </svg>
+        </button>
+
+        <div id="mobile-places-menu" class="hidden absolute top-full left-1/2 -translate-x-1/2 pt-2 z-50">
+          <div class="bg-background border border-border shadow-lg min-w-[160px]">
+            <a href="/places/botanic-gardens" class="block px-4 py-2 text-muted-foreground hover:text-foreground hover:bg-muted/50 transition-colors text-center">
+              <span class="lang-en">Botanic Gardens</span>
+              <span class="lang-it">Orti Botanici</span>
+            </a>
+            <a href="/places/tor-marancia" class="block px-4 py-2 text-muted-foreground hover:text-foreground hover:bg-muted/50 transition-colors text-center">
+              Tor Marancia
+            </a>
+            <a href="/places/villa-albani" class="block px-4 py-2 text-muted-foreground hover:text-foreground hover:bg-muted/50 transition-colors text-center">
+              Villa Albani
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Gallery -->
+      <a href="/gallery" class="text-muted-foreground hover:text-foreground transition-colors">
+        <span class="lang-en">Gallery</span>
+        <span class="lang-it">Galleria</span>
+      </a>
+
+      <!-- About -->
+      <a href="/about" class="text-muted-foreground hover:text-foreground transition-colors">
+        <span class="lang-en">Who are we?</span>
+        <span class="lang-it">Chi siamo?</span>
+      </a>
+    </div>
+  </div>
+</header>
+
+<script is:inline>
+  // Language toggle
+  function setLang(lang) {
+    document.documentElement.setAttribute('data-lang', lang);
+    localStorage.setItem('pleinpluie-lang', lang);
+  }
+
+  // Scroll detection
+  var header = document.getElementById('site-header');
+  function updateHeader() {
+    if (window.scrollY > 10) {
+      header.classList.remove('bg-background/80', 'backdrop-blur-sm');
+      header.classList.add('bg-background');
+    } else {
+      header.classList.add('bg-background/80', 'backdrop-blur-sm');
+      header.classList.remove('bg-background');
+    }
+  }
+  window.addEventListener('scroll', updateHeader);
+  updateHeader();
+
+  // Mobile places dropdown
+  var mobileBtn = document.getElementById('mobile-places-btn');
+  var mobileMenu = document.getElementById('mobile-places-menu');
+  var mobileChevron = document.getElementById('mobile-chevron');
+
+  mobileBtn.addEventListener('click', function () {
+    var isOpen = !mobileMenu.classList.contains('hidden');
+    if (isOpen) {
+      mobileMenu.classList.add('hidden');
+      mobileChevron.classList.remove('rotate-180');
+    } else {
+      mobileMenu.classList.remove('hidden');
+      mobileChevron.classList.add('rotate-180');
+    }
+  });
+
+  // Close mobile menu when a link is clicked
+  mobileMenu.querySelectorAll('a').forEach(function (link) {
+    link.addEventListener('click', function () {
+      mobileMenu.classList.add('hidden');
+      mobileChevron.classList.remove('rotate-180');
+    });
+  });
+</script>

@@ -1,0 +1,84 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+---
+
+<BaseLayout title="Tor Marancia — Plein Pluie">
+  <Header />
+
+  <main>
+    <article class="pt-32 pb-16 px-6">
+      <div class="max-w-4xl mx-auto">
+
+        <h1 class="text-3xl md:text-4xl font-light mb-8 text-foreground">
+          Tor Marancia
+        </h1>
+
+        <p class="lang-en text-lg md:text-xl leading-relaxed text-foreground/90 mb-6">
+          Excessive excavations of pozzolan, a volcanic material that was quintessential in the construction of Rome's monuments, forever erased a slice of the Roman countryside. The excavations gobbled up medieval towers, catacombs, pagan structures and - most importantly - the ruins of an important Roman villa. In this context, a place that's full of history yet robbed of its elements, our usual practice of painting in the rain takes on a dramatic intensity.
+        </p>
+        <p class="lang-it text-lg md:text-xl leading-relaxed text-foreground/90 mb-6">
+          Le eccessive escavazioni di pozzolana, un materiale vulcanico fondamentale nella costruzione dei monumenti di Roma, hanno cancellato per sempre uno spicchio della campagna romana. Gli scavi hanno inghiottito torri medievali, catacombe, strutture pagane e - soprattutto - i resti di un'importante villa romana. In questo contesto, un luogo ricco di storia ma privato dei suoi elementi, la nostra consueta pratica di dipingere sotto la pioggia assume un'intensità drammatica.
+        </p>
+
+        <p class="lang-en text-base md:text-lg italic text-foreground/70 mb-10">
+          Watch the artist work in the rain.
+        </p>
+        <p class="lang-it text-base md:text-lg italic text-foreground/70 mb-10">
+          Guarda l'artista lavorare sotto la pioggia.
+        </p>
+
+        <!-- Hero Video -->
+        <div class="mb-10 aspect-video">
+          <iframe
+            src="https://www.youtube.com/embed/T7NgvZ-zD8E?si=FU444Sdy6NyHA3vB"
+            title="Tor Marancia - Plein Pluie"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+            class="w-full h-full"
+          ></iframe>
+        </div>
+
+        <p class="lang-en text-lg md:text-xl leading-relaxed text-foreground/90 mb-10">
+          Once painted, Daniele tucks the paintings away from a passerby's gaze. He then returns a day or two later to retrieve the painting to see how the rain, wind, sun, surrounding nature and time contributed to the painting.
+        </p>
+        <p class="lang-it text-lg md:text-xl leading-relaxed text-foreground/90 mb-10">
+          Una volta dipinto, Daniele nasconde i dipinti allo sguardo dei passanti. Poi ritorna un giorno o due dopo per recuperare il dipinto e vedere come la pioggia, il vento, il sole, la natura circostante e il tempo hanno contribuito al dipinto.
+        </p>
+
+        <!-- Landscape Image -->
+        <div class="mb-10">
+          <img
+            src="/places/tor-marancia-landscape.jpg"
+            alt="Artist walking through Tor Marancia landscape with canvases under stormy skies"
+            width="1400"
+            height="788"
+            class="w-full h-auto"
+          />
+        </div>
+
+        <p class="lang-en text-base md:text-lg italic text-foreground/70 mb-10">
+          Daniele puts the final touches on the canvas.
+        </p>
+        <p class="lang-it text-base md:text-lg italic text-foreground/70 mb-10">
+          Daniele mette gli ultimi ritocchi sulla tela.
+        </p>
+
+        <!-- Second Video -->
+        <div class="mb-12 aspect-video">
+          <iframe
+            src="https://www.youtube.com/embed/AHUzYXET9b0"
+            title="Daniele finishing the canvas - Plein Pluie"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+            class="w-full h-full"
+          ></iframe>
+        </div>
+
+      </div>
+    </article>
+  </main>
+
+  <Footer />
+</BaseLayout>

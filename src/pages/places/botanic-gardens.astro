@@ -1,0 +1,64 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+---
+
+<BaseLayout title="Orto botanico di Roma — Plein Pluie">
+  <Header />
+
+  <main>
+    <article class="pt-32 pb-16 px-6">
+      <div class="max-w-4xl mx-auto">
+
+        <h1 class="text-3xl md:text-4xl font-light mb-8 text-foreground">
+          Orto botanico di Roma
+        </h1>
+
+        <p class="lang-en text-lg md:text-xl leading-relaxed text-foreground/90 mb-10">
+          When in Rome's botanical garden, you get the feeling that the city is far away. The plants, coming from far away lands add to the feeling of being away, but it's the place's history that really pushes you back. We're on the slopes of the Gianicolo, where, legend has it, a divine God named Giano once lived; the God of passage, in both time and space.
+        </p>
+        <p class="lang-it text-lg md:text-xl leading-relaxed text-foreground/90 mb-10">
+          All'Orto Botanico di Roma si prova la sensazione di non essere in città, ma altrove. Sono complici le piante, provenienti da tutto il mondo, ma è soprattutto la storia a condurre lontano. Siamo alle pendici del Gianicolo, dove la leggenda vuole che abitasse una divinità di nome Giano, il dio dei "passaggi", dal tempo allo spazio.
+        </p>
+
+        <!-- Hero Image -->
+        <div class="mb-10">
+          <img
+            src="/places/botanic-gardens-hero-new.jpg"
+            alt="Artist painting two canvases on bamboo leaves"
+            width="1400"
+            height="1050"
+            class="w-full h-auto"
+            loading="eager"
+          />
+        </div>
+
+        <!-- Gallery Image 1 -->
+        <div class="mb-12">
+          <img
+            src="/places/botanic-gardens-1.jpg"
+            alt="Painting in the Botanical Garden"
+            width="1400"
+            height="933"
+            class="w-full h-auto"
+          />
+        </div>
+
+        <!-- Circular Painting -->
+        <div class="mb-6">
+          <img
+            src="/places/botanic-gardens-circular-painting.jpg"
+            alt="Circular canvas painting displayed on green wooden door"
+            width="1400"
+            height="933"
+            class="w-full h-auto"
+          />
+        </div>
+
+      </div>
+    </article>
+  </main>
+
+  <Footer />
+</BaseLayout>
