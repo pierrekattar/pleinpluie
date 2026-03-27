@@ -7,43 +7,57 @@ import Footer from '../components/Footer.astro';
 <BaseLayout title="Who are we? — Plein Pluie">
   <Header />
 
-  <main style="background-image: linear-gradient(rgba(255,255,255,0.82), rgba(255,255,255,0.82)), url('/gallery/botanic-gardens-artist-bamboo-grove.jpg'); background-size: cover; background-position: center; background-attachment: fixed; min-height: 100vh;">
-    <article class="pt-32 pb-16 px-6">
-      <div class="max-w-4xl mx-auto">
+  <main style="display: flex; min-height: 100vh;">
 
-        <h1 class="text-3xl md:text-4xl font-light mb-12 text-foreground">
-          <span class="lang-en">Who are we?</span>
-          <span class="lang-it">Chi siamo?</span>
-        </h1>
+    <!-- Text column -->
+    <div style="flex: 1; min-width: 0;">
+      <article class="pt-32 pb-16 px-6">
+        <div class="max-w-xl mx-auto">
 
-        <!-- Daniele Leoni -->
-        <div class="mb-10">
-          <h2 class="text-xl md:text-2xl font-medium mb-4 text-foreground">
-            Daniele Leoni
-          </h2>
-          <p class="lang-en text-lg md:text-xl leading-relaxed text-foreground/90">
-            Daniele Leoni has worked as art historian at the Hermitage Museum in St. Petersburg and is currently a tour guide in Rome. He has authored several scientific papers. He earned a bachelor's degree in Cultural Heritage Conservation and has a graduate degree from the School of Specialization in Art History at the University of Bologna.
-          </p>
-          <p class="lang-it text-lg md:text-xl leading-relaxed text-foreground/90">
-            Daniele Leoni, laureato in Conservazione dei Beni Culturali e diplomato alla Scuola di Specializzazione di Storia dell'Arte dell'Università di Bologna, ha collaborato come storico dell'arte presso il Museo Ermitage di San Pietroburgo ed è attualmente guida turistica di Roma. Ha al suo attivo diverse pubblicazioni di carattere scientifico e divulgativo.
-          </p>
+          <h1 class="text-3xl md:text-4xl font-light mb-12 text-foreground">
+            <span class="lang-en">Who are we?</span>
+            <span class="lang-it">Chi siamo?</span>
+          </h1>
+
+          <!-- Daniele Leoni -->
+          <div class="mb-10">
+            <h2 class="text-xl md:text-2xl font-medium mb-4 text-foreground">
+              Daniele Leoni
+            </h2>
+            <p class="lang-en text-lg md:text-xl leading-relaxed text-foreground/90">
+              Daniele Leoni has worked as art historian at the Hermitage Museum in St. Petersburg and is currently a tour guide in Rome. He has authored several scientific papers. He earned a bachelor's degree in Cultural Heritage Conservation and has a graduate degree from the School of Specialization in Art History at the University of Bologna.
+            </p>
+            <p class="lang-it text-lg md:text-xl leading-relaxed text-foreground/90">
+              Daniele Leoni, laureato in Conservazione dei Beni Culturali e diplomato alla Scuola di Specializzazione di Storia dell'Arte dell'Università di Bologna, ha collaborato come storico dell'arte presso il Museo Ermitage di San Pietroburgo ed è attualmente guida turistica di Roma. Ha al suo attivo diverse pubblicazioni di carattere scientifico e divulgativo.
+            </p>
+          </div>
+
+          <!-- Pierre Kattar -->
+          <div class="mb-12">
+            <h2 class="text-xl md:text-2xl font-medium mb-4 text-foreground">
+              <a href="https://www.pierrekattar.com/" target="_blank" rel="noopener noreferrer" class="hover:opacity-70 transition-opacity">Pierre Kattar</a>
+            </h2>
+            <p class="lang-en text-lg md:text-xl leading-relaxed text-foreground/90">
+              <a href="https://www.pierrekattar.com/" target="_blank" rel="noopener noreferrer" class="hover:opacity-70 transition-opacity">Pierre Kattar</a> is an independent video journalist, filmmaker and art director, who began his career at The Washington Post. He collaborates with news organizations like the New York Times and NPR (National Public Radio).
+            </p>
+            <p class="lang-it text-lg md:text-xl leading-relaxed text-foreground/90">
+              Pierre Kattar, video journalist e film-maker, formatosi lavorando per il Washington Post, è attivo a livello internazionale e collabora con prestigiose testate giornalistiche, come il New York Times e NPR (National Public Radio).
+            </p>
+          </div>
+
         </div>
+      </article>
+    </div>
 
-        <!-- Pierre Kattar -->
-        <div class="mb-12">
-          <h2 class="text-xl md:text-2xl font-medium mb-4 text-foreground">
-            <a href="https://www.pierrekattar.com/" target="_blank" rel="noopener noreferrer" class="hover:opacity-70 transition-opacity">Pierre Kattar</a>
-          </h2>
-          <p class="lang-en text-lg md:text-xl leading-relaxed text-foreground/90">
-            <a href="https://www.pierrekattar.com/" target="_blank" rel="noopener noreferrer" class="hover:opacity-70 transition-opacity">Pierre Kattar</a> is an independent video journalist, filmmaker and art director, who began his career at The Washington Post. He collaborates with news organizations like the New York Times and NPR (National Public Radio).
-          </p>
-          <p class="lang-it text-lg md:text-xl leading-relaxed text-foreground/90">
-            Pierre Kattar, video journalist e film-maker, formatosi lavorando per il Washington Post, è attivo a livello internazionale e collabora con prestigiose testate giornalistiche, come il New York Times e NPR (National Public Radio).
-          </p>
-        </div>
+    <!-- Image column -->
+    <div style="width: 50%; position: sticky; top: 0; height: 100vh; flex-shrink: 0; overflow: hidden;">
+      <img
+        src="/gallery/botanic-gardens-artist-bamboo-grove.jpg"
+        alt="Artist painting beside bamboo grove"
+        style="width: 100%; height: 100%; object-fit: cover; object-position: right center;"
+      />
+    </div>
 
-      </div>
-    </article>
   </main>
 
   <Footer />
